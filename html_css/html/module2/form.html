@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: sans-serif;
+    }
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
   </head>
   <body>
     <form action="/login-endpoint" method="POST">
@@ -16,5 +34,92 @@
       <br />
     </form>
     <button type="submit">Log In</button>
+    <!-- Text Input -->
+    <div class="form-group">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+    </div>
+
+    <!-- Email Input -->
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="john@example.com" required>
+    </div>
+
+    <!-- Date Input -->
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob">
+    </div>
+
+    <!-- Select Dropdown -->
+    <div class="form-group">
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="" disabled selected>Select your country</option>
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+        <option value="uk">United Kingdom</option>
+        <option value="kh">Cambodia</option>
+      </select>
+    </div>
+
+    <!-- Radio Buttons (Single Choice) -->
+    <div class="form-group">
+      <label>Gender</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male" class="inline-label">Male</label>
+      
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female" class="inline-label">Female</label>
+      
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other" class="inline-label">Other</label>
+    </div>
+
+    <!-- Checkboxes (Multiple Choice) -->
+    <div class="form-group">
+      <label>Interests (Checklist)</label>
+      <input type="checkbox" id="coding" name="interests" value="coding">
+      <label for="coding" class="inline-label">Coding</label>
+      
+      <input type="checkbox" id="design" name="interests" value="design">
+      <label for="design" class="inline-label">Design</label>
+      
+      <input type="checkbox" id="gaming" name="interests" value="gaming">
+      <label for="gaming" class="inline-label">Gaming</label>
+    </div>
+
+    <!-- Textarea (Multi-line Input) -->
+    <div class="form-group">
+      <label for="bio">Short Bio</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+    </div>
+    <table>
+    <thead>
+      <tr>
+        <th>Project Name</th>
+        <th>Status</th>
+        <th>Folder Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Movie Ranking</td>
+        <td>Completed</td>
+        <td><code>module2/movie.html</code></td>
+      </tr>
+      <tr>
+        <td>Birthday Invite</td>
+        <td>In Progress</td>
+        <td><code>HTML-Porfolio-Project/</code></td>
+      </tr>
+      <tr>
+        <td>Portfolio</td>
+        <td>Active</td>
+        <td><code>module2/portfolio.html</code></td>
+      </tr>
+    </tbody>
+  </table>
   </body>
 </html>
