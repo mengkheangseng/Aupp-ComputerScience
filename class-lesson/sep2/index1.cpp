@@ -9,23 +9,25 @@ int main (){
     double total_payment;
     double overtime;
 
-    cout << "Enter the amount of hour you work: " << endl;
+    cout << "Enter the amount of hour you work: ";
     cin >> hours;
-    cout << "Enter hourly pay rate: "<<endl;
+    cout << "Enter hourly pay rate: ";
     cin >> pay_rate;
 
     cout << "-----------------------"<<endl;
     if (hours <= 40 && hours > 0){
         regular_pay = hours * pay_rate;
-        cout << "Total Payment: " << regular_pay << setprecision(2);
+        cout << "Total Payment: $" << fixed << setprecision(2) << regular_pay <<endl;
     }
-    if (hours > 40)
+    else if (hours > 40)
     {
         overtime = hours - 40;
         regular_pay = (hours - overtime)  * pay_rate;
         overtime_pay = overtime * pay_rate;
         total_payment = regular_pay + overtime_pay;
-        cout << "Total Payment: " << regular_pay << setprecision(2);
+        cout << "Regular Payment: $" << fixed << setprecision(2) << regular_pay << endl;
+        cout << "Overtime Payment: $" << fixed << setprecision(2) << overtime_pay << endl;
+        cout << "Total Payment: $" << fixed << setprecision(2) << regular_pay + overtime_pay <<endl;
     }
     else {
         cout <<"Invalid number of hours"<<endl;
