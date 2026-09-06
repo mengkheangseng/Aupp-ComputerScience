@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+/* Color Palette matching the image */
+.blue {
+    background-color: #00A2FF;
+}
+
+.teal {
+    background-color: #008B94;
+}
+
+.orange {
+    background-color: #D9822B;
+}
+
+.emoji-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji {
+    font-size: 5rem; /* Scales the emojis nicely */
+}
