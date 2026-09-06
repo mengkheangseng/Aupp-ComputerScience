@@ -1,0 +1,61 @@
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     double score;
+//     cout << "Enter your score: ";
+//     cin >> score;
+
+//     if (score >= 60 && score < 70)
+//     {
+//         cout << "Grade: D" << endl;
+//     }
+//     else if (score >= 70 && score < 80)
+//     {
+//         cout << "Grade: C" << endl;
+//     }
+//     else if (score >= 80 && score < 90)
+//     {
+//         cout << "Grade: B" << endl;
+//     }
+//     else if (score >= 90 && score <= 100)
+//     {
+//         cout << "Grade: A" << endl;
+//     }
+//     else if (score < 60 || score > 100)
+//     {
+//         cout << "Invalid score." << endl;
+//     }
+//     return 0;
+// }
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    double score;
+    cout << "Enter your score: ";
+    cin >> score;
+
+    if (score >= 60)
+    {
+        cout << "Grade: D" << endl;
+    }
+    else if (score >= 70)
+    {
+        cout << "Grade: C" << endl;
+    }
+    else if (score >= 80)
+    {
+        cout << "Grade: B" << endl;
+    }
+    else if (score >= 90)
+    {
+        cout << "Grade: A" << endl;
+    }
+    else if (score < 60 || score > 100)
+    {
+        cout << "Invalid score." << endl;
+    }
+    return 0;
+}
